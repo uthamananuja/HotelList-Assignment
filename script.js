@@ -225,7 +225,6 @@ function displayHotels(hotels, includes) {
 
                         // Get the feedback type (positive or negative)
                         const feedbackType = review.fields.feedback;
-                        const sign = feedbackType === 'positive' ? '' : '';
 
                         // Add a line break after each review
                         const lineBreak = document.createElement('hr');
@@ -238,7 +237,7 @@ function displayHotels(hotels, includes) {
 
                         
                         // Prepend the sign to the comment
-                        reviewItem.textContent = `${sign} ${comments}`;
+                        reviewItem.textContent = `${comments}`;
                         reviewsListContainer.appendChild(reviewItem);
 
                         // Add a class based on the feedback type for styling
